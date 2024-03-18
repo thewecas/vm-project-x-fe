@@ -1,0 +1,110 @@
+<app-icon name="brand" color="dark"></app-icon>
+
+<form name="login form" [formGroup]="userForm">
+  <span class="p-float-label">
+    <input
+      pInputText
+      id="fullname"
+      formControlName="fullname"
+      name="fullname"
+      autocomplete="fullname"
+    />
+    <label for="fullname">Full Name</label>
+  </span>
+  <span class="p-float-label">
+    <input
+      pInputText
+      id="username"
+      formControlName="username"
+      name="username"
+      autocomplete="username"
+    />
+    <label for="username">Username</label>
+  </span>
+
+  <span class="p-float-label">
+    <p-password
+      formControlName="password"
+      [toggleMask]="true"
+      [feedback]="true"
+      name="password"
+      autocomplete="current-password"
+    ></p-password>
+    <label for="password">Password</label>
+  </span>
+  <span class="p-float-label">
+    <p-password
+      [(ngModel)]="confirm_password"
+      name="confirm_password"
+      [ngModelOptions]="{ standalone: true }"
+      [toggleMask]="true"
+      [feedback]="true"
+      name="confirm-password"
+      autocomplete="confirm-password"
+    ></p-password>
+    <label for="confirm-password">Confirm Password</label>
+  </span>
+
+  <span class="p-float-label">
+    <p-dropdown
+      formControlName="role"
+      [options]="rolesList"
+      [style]="{ minWidth: '14rem' }"
+      placeholder="Select Role"
+      id="role"
+    >
+    </p-dropdown>
+    <label for="role">Role</label>
+  </span>
+
+  <div class="row">
+    <p-checkbox
+      [(ngModel)]="policyChecked"
+      name="policyChecked"
+      [ngModelOptions]="{ standalone: true }"
+      [binary]="true"
+      inputId="binary"
+      label="I agree with the user terms and privacy policy"
+    ></p-checkbox>
+  </div>
+
+  <div class="btn-wrapper full-width-btn">
+    <p-button label="SignUp"></p-button>
+  </div>
+</form>
+<div class="social-media">
+  <span severity="secondary">Signup with Social Accounts</span>
+  <div class="icon-wrapper">
+    <p-button
+      [outlined]="true"
+      severity="secondary"
+      icon="pi pi-google"
+    ></p-button>
+    <p-button
+      [outlined]="true"
+      severity="secondary"
+      icon="pi pi-github"
+    ></p-button>
+    <p-button
+      [outlined]="true"
+      severity="secondary"
+      icon="pi pi-linkedin"
+    ></p-button>
+    <p-button
+      [outlined]="true"
+      severity="secondary"
+      icon="pi pi-twitter"
+    ></p-button>
+  </div>
+</div>
+
+<div class="signup-prompt">
+  <span>Already have an account ? </span>
+  <p-button
+    routerLink="/login"
+    label="Signin"
+    class="padding-2-btn"
+    [text]="true"
+    severity="secondary"
+  ></p-button>
+</div>

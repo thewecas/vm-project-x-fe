@@ -1,0 +1,45 @@
+:host {
+  @apply grid justify-center align-bottom content-end min-h-[100vh] gap-12;
+}
+
+app-icon {
+  @apply block w-6/12 mx-auto mt-8;
+}
+
+form {
+  @apply flex flex-col w-full gap-2;
+  width: min(400px, 90vw);
+
+  .p-float-label, p-dropwon{
+    @apply my-4;
+  }
+  .p-inputtext,
+  .p-inputwrapper {
+    @apply w-full block;
+  }
+
+  .row {
+    @apply flex justify-between items-center gap-4 flex-wrap min-h-14;
+  }
+
+  .btn-wrapper {
+    @apply flex flex-col justify-end gap-4;
+    p-button {
+      @apply w-full;
+      .p-button {
+        @apply w-full;
+      }
+    }
+  }
+}
+
+.social-media {
+  @apply flex flex-col gap-4 items-center;
+  .icon-wrapper {
+    @apply flex flex-wrap gap-4 text-lg;
+  }
+}
+
+.signup-prompt {
+  @apply flex items-center gap-2 justify-center mb-8;
+}

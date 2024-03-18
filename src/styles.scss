@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+// @tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "primeng/resources/primeng.min.css";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeicons/primeicons.css";
+
+html {
+  @apply text-base;
+
+}
+body{
+  @apply  min-h-[100vh] p-0 m-0 ;
+  scrollbar-gutter: 8px;
+}
+.p-password,.p-dropdown,
+.p-input-icon-right > .p-inputtext {
+  @apply w-full;
+}
+.full-width-btn{
+  .p-button{
+    @apply w-full;
+  }
+}
+
+.padding-2-btn button{
+  @apply p-2;
+}
+
+::-webkit-scrollbar{
+  @apply w-[6px] h-[6px];
+}
+
+::-webkit-scrollbar-thumb{
+  @apply rounded bg-blue-500;
+}
+
+::-webkit-scrollbar-track{
+  @apply w-4 bg-transparent;
+}
+
+

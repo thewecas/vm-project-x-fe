@@ -1,0 +1,81 @@
+<app-icon name="brand" color="dark"></app-icon>
+
+<form name="login form">
+  <span class="p-float-label">
+    <input
+      pInputText
+      id="username"
+      [(ngModel)]="username"
+      name="username"
+      autocomplete="username"
+    />
+    <label for="username">Email or Username</label>
+  </span>
+
+  <span class="p-float-label">
+    <p-password
+      [(ngModel)]="password"
+      [toggleMask]="true"
+      [feedback]="true"
+      name="password"
+      autocomplete="current-password"
+    ></p-password>
+    <label for="password">Password</label>
+  </span>
+  <div class="row">
+    <p-checkbox
+      [(ngModel)]="rememberChecked"
+      name="rememberChecked"
+      [binary]="true"
+      inputId="binary"
+      label="Remember me"
+    ></p-checkbox>
+    <p-button
+      label="Forgot Password ?"
+      class="padding-2-btn"
+      [text]="true"
+      size="small"
+      severity="secondary"
+    ></p-button>
+  </div>
+
+  <div class="btn-wrapper full-width-btn">
+    <p-button label="Login"></p-button>
+  </div>
+</form>
+<div class="social-media">
+  <span severity="secondary">Signin with Social Accounts</span>
+  <div class="icon-wrapper">
+    <p-button
+      [outlined]="true"
+      severity="secondary"
+      icon="pi pi-google"
+    ></p-button>
+    <p-button
+      [outlined]="true"
+      severity="secondary"
+      icon="pi pi-github"
+    ></p-button>
+    <p-button
+      [outlined]="true"
+      severity="secondary"
+      icon="pi pi-linkedin"
+    ></p-button>
+    <p-button
+      [outlined]="true"
+      severity="secondary"
+      icon="pi pi-twitter"
+    ></p-button>
+  </div>
+</div>
+
+<div class="signup-prompt">
+  <span>Don't have an account ? </span>
+  <p-button
+    routerLink="/signup"
+    label="Signup"
+    class="padding-2-btn"
+    [text]="true"
+    severity="secondary"
+  ></p-button>
+</div>
